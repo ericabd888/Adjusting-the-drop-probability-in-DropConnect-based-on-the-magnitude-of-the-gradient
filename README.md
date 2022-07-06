@@ -3,8 +3,9 @@
 A Gradient DropConnect Model by adjusting the drop probability based on the magnitude of the gradient.
 
 ## QuickStart
-## SimpleCNN1_MNIST_Exp.py
-* Use MNIST Dataset to train SimpleCNN1 Network, with Vallina, Dropout, DropConnect, DropSmallW, DropBigW, DropSmallGd, DropBigBd
+
+SimpleCNN1_MNIST_Exp.py
+* Training SimpleCNN1 Network on MNIST, with Vallina, Dropout, DropConnect, DropSmallW, DropBigW, DropSmallGd, DropBigBd technique.
 ### Usage:
 ```
 $ python SimpleCNN1_MNIST_Exp.py
