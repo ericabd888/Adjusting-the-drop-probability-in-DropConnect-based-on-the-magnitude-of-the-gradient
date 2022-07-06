@@ -1,7 +1,7 @@
 certifi==2022.6.15
 charset-normalizer==2.1.0
 cosine-annealing-warmup==2.0 
-git+https://github.com/katsura-jp/pytorch-cosine-annealing-with-warmup.git
+git+https://github.com/katsura-jp/pytorch-cosine-annealing-with-warmup
 cycler==0.11.0
 fonttools==4.33.3
 idna==3.3
