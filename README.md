@@ -2,6 +2,11 @@
 ## Introduction
 A Gradient DropConnect Model by adjusting the drop probability based on the magnitude of the gradient.
 
+## SetUp
+Tested under Python 3.8.12 in Ubuntu. Install the required packages by
+```
+$ pip install -r requirements.txt
+```
 ## QuickStart
 ## MNIST
 ### SimpleCNN1_MNIST_Exp.py
