@@ -161,19 +161,21 @@ hyper_param_configs = [{'model_name': 'Vallina', 'num_classes': 10, 'add_layer':
                        ]
 Result = []
 
-for config in tzip(range(len(hyper_param_configs))):
-    if hyper_param_configs[config[0]]['model_name'] == "Dropout":
-        model = SimpleCNN1.SimpleCNN1_dropout(**hyper_param_configs[config[0]])
-    else:
-        model = SimpleCNN1.SimpleCNN1(**hyper_param_configs[config[0]])
-    model.to(DEVICE)
-    model.weights_init()
-    model.compiler(lr=LR, weight_decay=weight_decay, lr_scheduler_apply=True, 
-                   device=DEVICE, cosine=True, first_cycle_steps=RUN_EPOCHS, 
-                   max_lr=LR, warmup_steps=12, gamma=0.2)
-    model.fit(RUN_EPOCHS, train_loader, valid_loader, test_loader, show_test_result=True)
-    print(model._Eval_Score(save=False))
-    Result.append(model)
-    
-get_result_table(Result)
-        
+
+
+if __name__ == '__main__':
+    for config in tzip(range(len(hyper_param_configs))):
+        if hyper_param_configs[config[0]]['model_name'] == "Dropout":
+            model = SimpleCNN1.SimpleCNN1_dropout(**hyper_param_configs[config[0]])
+        else:
+            model = SimpleCNN1.SimpleCNN1(**hyper_param_configs[config[0]])
+        model.to(DEVICE)
+        model.weights_init()
+        model.compiler(lr=LR, weight_decay=weight_decay, lr_scheduler_apply=True, 
+                       device=DEVICE, cosine=True, first_cycle_steps=RUN_EPOCHS, 
+                       max_lr=LR, warmup_steps=12, gamma=0.2)
+        model.fit(RUN_EPOCHS, train_loader, valid_loader, test_loader, show_test_result=True)
+        print(model._Eval_Score(save=False))
+        Result.append(model)
+
+    get_result_table(Result)
