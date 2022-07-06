@@ -1,0 +1,22 @@
+certifi==2021.10.8
+charset-normalizer==2.0.12
+cosine-annealing-warmup @ git+https://github.com/katsura-jp/pytorch-cosine-annealing-with-warmup@2958117072f214dce743f918d6a2253f682ab65d
+fonttools==4.28.5
+imageio==2.16.1
+importlib-metadata==4.11.3
+jeepney==0.8.0
+jupyter==1.0.0
+matplotlib==3.5.1
+pathlib==1.0.1
+pkginfo==1.8.2
+pytorch-ignite==0.4.8
+pytorch-model-summary==0.1.2
+pytorch-warmup==0.0.4
+pytz==2021.3
+scipy==1.8.0
+torch==1.10.1
+torchaudio==0.10.1
+torchvision==0.11.2
+warmup-scheduler @ git+https://github.com/ildoonet/pytorch-gradual-warmup-lr.git@6b5e8953a80aef5b324104dc0c2e9b8c34d622bd
+
+
