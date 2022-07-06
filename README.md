@@ -8,7 +8,7 @@ A Gradient DropConnect Model by adjusting the drop probability based on the magn
 * Training SimpleCNN1 Network on MNIST, with Vallina, Dropout, DropConnect, DropSmallW, DropBigW, DropSmallGd, DropBigBd technique.
 ### Usage:
 ```
-$ python SimpleCNN1_MNIST_Exp.py
+$ python exp/MNIST_exp/SimpleCNN1_MNIST_Exp.py
       --epoch <number of epoch>
       --lr <learning rate>
       --weight_decay <optimizer weight decay>
@@ -25,7 +25,7 @@ $ python SimpleCNN1_MNIST_Exp.py
 ```
 ### Default Example:
 ```
-$ python SimpleCNN1_MNIST_Exp.py
+$ python exp/MNIST_exp/SimpleCNN1_MNIST_Exp.py
       --epoch 75
       --lr 0.001
       --weight_decay 5e-4
@@ -44,7 +44,7 @@ $ python SimpleCNN1_MNIST_Exp.py
 * Training SimpleCNN1 Network on CIFAR10, with Vallina, Dropout, DropConnect, DropSmallW, DropBigW, DropSmallGd, DropBigBd technique.
 ### Default Example:
 ```
-$ python SimpleCNN1_CIFAR10_Exp.py
+$ python exp/CIFAR10_exp/SimpleCNN1_CIFAR10_Exp.py
       --epoch 120
       --lr 0.005
       --weight_decay 5e-4
@@ -62,7 +62,7 @@ $ python SimpleCNN1_CIFAR10_Exp.py
 * Training SimpleCNN2 Network on CIFAR10, with Vallina, Dropout, DropConnect, DropSmallW, DropBigW, DropSmallGd, DropBigBd technique.
 ### Default Example:
 ```
-$ python SimpleCNN2_CIFAR10_Exp.py
+$ python exp/CIFAR10_exp/SimpleCNN2_CIFAR10_Exp.py
       --epoch 130
       --lr 0.055
       --weight_decay 5e-5
@@ -80,7 +80,7 @@ $ python SimpleCNN2_CIFAR10_Exp.py
 * Training AlexNet Network on CIFAR10, with Vallina, Dropout, DropConnect, DropSmallW, DropBigW, DropSmallGd, DropBigBd technique.
 ### Default Example:
 ```
-$ python AlexNet_CIFAR10_Exp.py
+$ python exp/CIFAR10_exp/AlexNet_CIFAR10_Exp.py
       --epoch 40
       --lr 0.01
       --weight_decay 5e-4
@@ -98,7 +98,7 @@ $ python AlexNet_CIFAR10_Exp.py
 * Training VGG Network on CIFAR10, with Vallina, Dropout, DropConnect, DropSmallW, DropBigW, DropSmallGd, DropBigBd technique.
 ### Default Example:
 ```
-$ python VGG_CIFAR10_Exp.py
+$ python exp/CIFAR10_exp/VGG_CIFAR10_Exp.py
       --epoch 100
       --lr 0.005
       --weight_decay 0
@@ -117,7 +117,7 @@ $ python VGG_CIFAR10_Exp.py
 * Training VGG Network on CIFAR100, with Vallina, Dropout, DropConnect, DropSmallW, DropBigW, DropSmallGd, DropBigBd technique.
 ### Default Example:
 ```
-$ python VGG_CIFAR100_Exp.py
+$ python exp/CIFAR100_exp/VGG_CIFAR100_Exp.py
       --epoch 220
       --lr 0.06
       --weight_decay 8e-4
@@ -136,7 +136,7 @@ $ python VGG_CIFAR100_Exp.py
 * Training SimpleCNN2 Network on NORB, with Vallina, Dropout, DropConnect, DropSmallW, DropBigW, DropSmallGd, DropBigBd technique.
 ### Default Example:
 ```
-$ python SimpleCNN2_NORB_Exp.py
+$ python exp/NORB_exp/SimpleCNN2_NORB_Exp.py
       --epoch 100
       --lr 0.001
       --weight_decay 6.5e-3
@@ -154,7 +154,7 @@ $ python SimpleCNN2_NORB_Exp.py
 * Training AlexNet Network on NORB, with Vallina, Dropout, DropConnect, DropSmallW, DropBigW, DropSmallGd, DropBigBd technique.
 ### Default Example:
 ```
-$ python AlexNet_NORB_Exp.py
+$ python exp/NORB_exp/AlexNet_NORB_Exp.py
       --epoch 75
       --lr 0.0002
       --weight_decay 0
@@ -172,7 +172,7 @@ $ python AlexNet_NORB_Exp.py
 * Training VGG Network on NORB, with Vallina, Dropout, DropConnect, DropSmallW, DropBigW, DropSmallGd, DropBigBd technique.
 ### Default Example:
 ```
-$ python VGG_NORB_Exp.py
+$ python exp/NORB_exp/VGG_NORB_Exp.py
       --epoch 85
       --lr 0.0008
       --weight_decay 4e-4
