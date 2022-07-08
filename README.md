@@ -2,6 +2,10 @@
 ## Introduction
 A Gradient DropConnect Model by adjusting the drop probability based on the magnitude of the gradient.
 
+## DATASETS DOWNLOAD
+* NORB DATASETS: A zip files of NORB Datasets, 'final_train_data.pt' and 'final_test_data.pt' are NORB Datasets's train and test data. [Download link](https://drive.google.com/file/d/1i45E2uTEJPoNuXuGeRjiIvfNwBAd1S8I/view?usp=sharing)
+
+
 ## SetUp
 Tested under Python 3.8.12 in Ubuntu. Install the required packages by
 ```
