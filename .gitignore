@@ -1,0 +1,9 @@
+.python-version
+data/MNIST/
+data/cifar-10-batches-py/
+data/cifar-10-python.tar.gz
+data/cifar-100-python.tar.gz
+data/cifar-100-python/
+__pycache__/
+data/big_norb_data/final_test_data.pk
+data/big_norb_data/final_train_data.pk
