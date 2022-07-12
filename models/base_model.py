@@ -188,7 +188,7 @@ class Models(nn.Module):
         '''
             follow keras-like train mode, fit function, here is for training your model
         '''
-        self.epoch = EPOCHS
+        self.epoch = int(EPOCHS)
         print("Start Training...\nRunning {} .... ".format(self.model_name))
         self.lr_list = []
         self.train_loss = []
@@ -202,7 +202,7 @@ class Models(nn.Module):
         if self.drop_connect:       
             print("Drop Connect Apply\n")
         
-        for epoch in tqdm(range(1, EPOCHS+1)):
+        for epoch in tqdm(range(1, self.epoch+1)):
             self.train()
             running_loss = 0
             correct = 0
