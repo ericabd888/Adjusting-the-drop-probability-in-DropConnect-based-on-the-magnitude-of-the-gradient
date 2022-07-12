@@ -114,7 +114,7 @@ class GradWeightDrop(nn.Module):
                 [0.1, 0.3],      [0.3, 0.2],
                 [0.9, 0.65]  >   [0.7, 0.9]     """
         #Random Sampling
-        uniform = torch.cuda.FloatTensor(p.size()).uniform_(0, 1).to(self.device)
+        uniform = torch.cuda.FloatTensor(p.size()).uniform_(0, 1).to(self.device) if torch.cuda.is_available() else torch.FloatTensor(p.size()).uniform_(0, 1)
         #Setting Mask
         mask = p >= uniform
         mask = torch.logical_not(mask)
