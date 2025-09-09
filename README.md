@@ -51,12 +51,25 @@ Common flags supported by most scripts:
 
 Place the downloaded files under `data/big_norb_data/` if needed by your run.
 
+## Topics
+Suggested GitHub topics to improve discoverability:
+- deep-learning
+- regularization
+- dropconnect
+- pytorch
+- computer-vision
+- gradient-based-learning
+
+You can set them with GitHub’s UI (Repo → Settings → General → Topics) or CLI:
+`gh repo edit --add-topic deep-learning --add-topic regularization --add-topic dropconnect --add-topic pytorch --add-topic computer-vision --add-topic gradient-based-learning`
+
 ## Repo structure
 ```
 exp/                  # Experiment entrypoints per dataset
 models/               # Model definitions + Gradient DropConnect module
 utils/                # Helpers
 data/                 # Dataset assets (incl. NORB tensors)
+assets/screenshots/   # Project screenshots referenced in README
 ```
 
 ## Reference
