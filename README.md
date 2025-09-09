@@ -7,6 +7,14 @@ Short description: Train CNNs with Gradient DropConnect, which adapts DropConnec
 - Ready-to-run experiment scripts per dataset/model
 - Reproducible defaults, warmup + LR scheduler support
 
+## Screenshots
+Place images in `assets/screenshots/` and they will render here.
+
+![Training curves](assets/screenshots/training_curves.png)
+![CIFAR10 results table](assets/screenshots/cifar10_results.png)
+![NORB sample batch](assets/screenshots/norb_samples.png)
+![Gradient mask heatmap](assets/screenshots/gradient_mask_heatmap.png)
+
 ## Quickstart
 Tested with Python 3.8.12.
 
