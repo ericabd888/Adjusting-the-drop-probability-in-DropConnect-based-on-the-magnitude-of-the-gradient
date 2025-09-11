@@ -1,5 +1,13 @@
-import torch
+import sys
 import types
+import torch
+
+# Mock heavy optional deps before importing module
+sys.modules.setdefault("matplotlib", types.ModuleType("matplotlib"))
+sys.modules.setdefault("matplotlib.pyplot", types.ModuleType("matplotlib.pyplot"))
+sys.modules.setdefault("torchvision", types.ModuleType("torchvision"))
+sys.modules.setdefault("torchvision.transforms", types.ModuleType("torchvision.transforms"))
+
 from models.gradient_dropconnect import GradWeightDrop
 
 
