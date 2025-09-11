@@ -101,10 +101,10 @@ class MyDataset_from_numpy(Dataset):
 
 file_loc = dirname(dirname(dirname(abspath(__file__))))
 
-with open(file_loc+"/data/big_norb_data/final_train_data.pk", 'rb') as f:
+with open(file_loc+"/data/big_norb_data/pickle_norb/final_train_data.pk", 'rb') as f:
     train_set = pickle.load(f)
     
-with open(file_loc+"/data/big_norb_data/final_test_data.pk", 'rb') as f:
+with open(file_loc+"/data/big_norb_data/pickle_norb/final_test_data.pk", 'rb') as f:
     test_set = pickle.load(f)
 
 train_set = MyDataset_from_numpy(train_set)

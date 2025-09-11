@@ -307,6 +307,7 @@ class Models(nn.Module):
                 if self.warm_up == False:
                     self.lr_scheduler.step()
             if epoch % 1 == 0 or epoch == EPOCHS:
+                # print(self.drop_model[0].final_left_rate)
                 print("\nCurrent Epoch: {}, LR: {}, Max Test Acc: {:.4f}, LeftRate: {}".format(epoch, self.optimizer.param_groups[0]['lr'], 100*max(self.test_acc), self.drop_model[0].final_left_rate if self.drop_model else None))
                 print("Train Acc => {:.4f}".format(100 * running_acc), end=' | ')
                 print("Train Loss => {:.4f}".format(running_loss))

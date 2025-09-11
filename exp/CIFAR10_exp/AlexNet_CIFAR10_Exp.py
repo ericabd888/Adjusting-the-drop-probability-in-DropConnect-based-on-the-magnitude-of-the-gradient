@@ -162,10 +162,11 @@ hyper_param_configs = [{'model_name': 'Vallina', 'num_classes': 10, 'add_layer':
 Result = []
 
 for config in tzip(range(len(hyper_param_configs))):
-    if hyper_param_configs[config[0]]['model_name'] == "Dropout":
-        model = AlexNet.AlexNet_dropout(**hyper_param_configs[config[0]])
-    else:
-        model = AlexNet.AlexNet(**hyper_param_configs[config[0]])
+    # if hyper_param_configs[config[0]]['model_name'] == "Dropout":
+    #     model = AlexNet.AlexNet_dropout(**hyper_param_configs[config[0]])
+    # else:
+    #     model = AlexNet.AlexNet(**hyper_param_configs[config[0]])
+    model = AlexNet.AlexNet(**hyper_param_configs[2])
     model.to(DEVICE)
     model.weights_init()
     model.compiler(lr=LR, weight_decay=weight_decay, lr_scheduler_apply=apply_lr_scheduler, 

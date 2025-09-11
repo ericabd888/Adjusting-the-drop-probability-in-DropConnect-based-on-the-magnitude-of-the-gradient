@@ -69,9 +69,7 @@ class GradWeightDrop(nn.Module):
 
 
 
-                    standard_gd = (grad_abs - gd_mean) / (gd_std + self.eps)
-
-
+                    standard_gd = (grad_abs - gd_mean) / (gd_std + self.eps) #z-score
                     gd_sigmoid = torch.sigmoid(standard_gd)
                 
                     if self.gd_small:
@@ -86,12 +84,10 @@ class GradWeightDrop(nn.Module):
         
                     final_drop_p += self.GD_P*gd_sigmoid
 
-                
                 final_mask = self._mask(final_drop_p)
 
 
                 left_rate = torch.sum(final_mask) / final_mask.view(-1).size(0)
-
                 divide_drop_p_value = torch.sum(final_drop_p) / final_drop_p.view(-1).size(0)
                 self.final_drop_rate = divide_drop_p_value.cpu().data.numpy()
                 self.final_left_rate = left_rate.cpu().data.numpy()

@@ -162,10 +162,11 @@ hyper_param_configs = [{'model_name': 'Vallina', 'num_classes': 10, 'add_layer':
 Result = []
 
 for config in tzip(range(len(hyper_param_configs))):
-    if hyper_param_configs[config[0]]['model_name'] == "Dropout":
-        model = SimpleCNN2.SimpleCNN2_dropout(**hyper_param_configs[config[0]])
-    else:
-        model = SimpleCNN2.SimpleCNN2(**hyper_param_configs[config[0]])
+#    if hyper_param_configs[config[0]]['model_name'] == "Dropout":
+#         model = SimpleCNN2.SimpleCNN2_dropout(**hyper_param_configs[config[0]])
+#     else:
+#         model = SimpleCNN2.SimpleCNN2(**hyper_param_configs[config[0]])
+    model = SimpleCNN2.SimpleCNN2(**hyper_param_configs[5])
     model.to(DEVICE)
     model.weights_init()
     model.compiler(lr=LR, weight_decay=weight_decay, lr_scheduler_apply=apply_lr_scheduler, 

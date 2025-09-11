@@ -38,8 +38,8 @@ def get_parser():
     parser.add_argument('--lr', default=0.005, type=float)
     parser.add_argument('--weight_decay', default=5e-4, type=float)
     parser.add_argument('--dropout_rate', default=0.5, type=float)
-    parser.add_argument('--dropconnect_rate', default=0.5, type=flot)
-    parser.add_argument('--gd_init_droprate', default=0.3, type=flot)
+    parser.add_argument('--dropconnect_rate', default=0.5, type=float)
+    parser.add_argument('--gd_init_droprate', default=0.3, type=float)
     parser.add_argument('--gd_droprate', default=0.5, type=float)
     parser.add_argument('--w_init_droprate', default=0.3, type=float)
     parser.add_argument('--w_droprate', default=0.5, type=float)
@@ -162,10 +162,11 @@ hyper_param_configs = [{'model_name': 'Vallina', 'num_classes': 10, 'add_layer':
 Result = []
 
 for config in tzip(range(len(hyper_param_configs))):
-    if hyper_param_configs[config[0]]['model_name'] == "Dropout":
-        model = SimpleCNN1.SimpleCNN1_dropout(**hyper_param_configs[config[0]])
-    else:
-        model = SimpleCNN1.SimpleCNN1(**hyper_param_configs[config[0]])
+    # if hyper_param_configs[config[0]]['model_name'] == "Dropout":
+    #     model = SimpleCNN1.SimpleCNN1_dropout(**hyper_param_configs[config[0]])
+    # else:
+    #     model = SimpleCNN1.SimpleCNN1(**hyper_param_configs[config[0]])
+    model = SimpleCNN1.SimpleCNN1(**hyper_param_configs[2])
     model.to(DEVICE)
     model.weights_init()
     model.compiler(lr=LR, weight_decay=weight_decay, lr_scheduler_apply=apply_lr_scheduler, 
