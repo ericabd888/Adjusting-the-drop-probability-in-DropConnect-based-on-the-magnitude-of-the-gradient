@@ -23,7 +23,8 @@ def test_gradweightdrop_forward_pass_no_grad_returns_weight():
 
 def test_gradweightdrop_mask_shape_matches_weight():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    layer = GradWeightDrop(device=device, I_P=0.2, W_P=0.0, GD_P=0.0)
+    # Ensure final_drop_p becomes a tensor by enabling weight-based path
+    layer = GradWeightDrop(device=device, I_P=0.2, W_P=0.0, GD_P=0.0, w_small=False)
     w = torch.randn(8, 8, device=device)
     g = torch.randn_like(w)
 
